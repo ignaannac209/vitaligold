@@ -1,0 +1,150 @@
+/* ==========================================================
+   main-menu-view.css
+   Estilos para el Menú Principal - VitaliGold Centro de Salud
+   Paleta clínica: blancos (#FFFFFF, #F4F6F9) y azules
+   médicos (#0F4C81, #1E88E5, #00A896)
+   ========================================================== */
+
+.root-background {
+    -fx-background-color: #F4F6F9;
+}
+
+.encabezado {
+    -fx-background-color: #0F4C81;
+}
+
+.logo-badge {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0F4C81;
+    -fx-background-color: white;
+    -fx-background-radius: 999px;
+    -fx-min-width: 34px;
+    -fx-min-height: 34px;
+    -fx-max-width: 34px;
+    -fx-max-height: 34px;
+    -fx-alignment: CENTER;
+}
+
+.marca {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.usuario-activo {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #A8D8FF;
+}
+
+.menu-lateral {
+    -fx-background-color: white;
+    -fx-border-color: transparent #DCE6F0 transparent transparent;
+    -fx-border-width: 0 1px 0 0;
+}
+
+.boton-menu {
+    -fx-background-color: transparent;
+    -fx-text-fill: #22313F;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10px 14px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.boton-menu:hover {
+    -fx-background-color: #E9F3FD;
+    -fx-text-fill: #0F4C81;
+}
+
+.boton-menu-activo {
+    -fx-background-color: #E9F3FD;
+    -fx-text-fill: #0F4C81;
+    -fx-border-color: transparent transparent transparent #1E88E5;
+    -fx-border-width: 0 0 0 3px;
+}
+
+.boton-menu-activo:hover {
+    -fx-background-color: #DCEBFB;
+}
+
+.boton-cerrar-sesion {
+    -fx-text-fill: #c0392b;
+}
+
+.boton-cerrar-sesion:hover {
+    -fx-background-color: #fdecea;
+    -fx-text-fill: #c0392b;
+}
+
+.contenido-principal {
+    -fx-background-color: #F4F6F9;
+}
+
+.titulo-seccion {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0F4C81;
+}
+
+.area-contenido {
+    -fx-background-color: white;
+    -fx-background-radius: 12px;
+    -fx-border-color: #DCE6F0;
+    -fx-border-radius: 12px;
+    -fx-padding: 24px;
+    -fx-alignment: TOP_LEFT;
+}
+
+/* Panel de Inicio */
+.inicio-root {
+    -fx-alignment: TOP_LEFT;
+}
+
+.inicio-saludo {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0F4C81;
+}
+
+.inicio-descripcion {
+    -fx-font-size: 13px;
+    -fx-text-fill: #5B7083;
+}
+
+.inicio-stat-card {
+    -fx-background-color: #F4F6F9;
+    -fx-background-radius: 12px;
+    -fx-border-color: #DCE6F0;
+    -fx-border-radius: 12px;
+    -fx-border-width: 1px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.inicio-stat-numero {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0F4C81;
+}
+
+.inicio-stat-etiqueta {
+    -fx-font-size: 12px;
+    -fx-text-fill: #5B7083;
+}
+
+.boton-inicio-cta {
+    -fx-background-color: #0F4C81;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 22px;
+    -fx-cursor: hand;
+}
+
+.boton-inicio-cta:hover {
+    -fx-background-color: #123f6b;
+}

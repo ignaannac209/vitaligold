@@ -1,0 +1,92 @@
+/* ==========================================================
+   registro-view.css
+   Estilos para la pantalla de Crear Cuenta - VitaliGold Centro de Salud
+   ========================================================== */
+
+.root-background {
+    -fx-background-color: white;
+}
+
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 16px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 24, 0, 0, 8);
+}
+
+.titulo {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2b2d31;
+}
+
+.subtitulo {
+    -fx-font-size: 12px;
+    -fx-text-fill: #7f8c9a;
+}
+
+.etiqueta-campo {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #45526b;
+}
+
+.campo {
+    -fx-alignment: CENTER_LEFT;
+}
+
+.text-field, .password-field {
+    -fx-background-color: #f4f6f9;
+    -fx-background-radius: 8px;
+    -fx-border-color: #dcdde1;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+    -fx-padding: 10px 12px;
+    -fx-font-size: 13px;
+    -fx-text-fill: #2f3640;
+    -fx-prompt-text-fill: #a5b1c2;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-background-color: white;
+    -fx-border-color: #0F4C81;
+    -fx-border-width: 1.5px;
+}
+
+.boton-primario {
+    -fx-background-color: #0F4C81;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+.boton-primario:hover {
+    -fx-background-color: #123f6b;
+}
+
+.boton-primario:pressed {
+    -fx-background-color: #0c3358;
+}
+
+.boton-secundario {
+    -fx-background-color: transparent;
+    -fx-text-fill: #0F4C81;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-border-color: #0F4C81;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 9px 20px;
+    -fx-cursor: hand;
+}
+
+.boton-secundario:hover {
+    -fx-background-color: #E9F3FD;
+}
+
+.mensaje-error {
+    -fx-text-fill: #c0392b;
+    -fx-font-size: 12px;
+}

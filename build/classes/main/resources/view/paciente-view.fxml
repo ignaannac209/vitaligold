@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="main.java.com.ingsoft.vitaligold.controller.PacienteController"
+      spacing="12" styleClass="pacientes-root"
+      stylesheets="@/main/resources/css/pacientes-view.css">
+
+    <padding>
+        <Insets top="4" right="4" bottom="4" left="4" />
+    </padding>
+
+    <Label text="Admisión de Pacientes" styleClass="pacientes-titulo" />
+
+    <VBox spacing="10" styleClass="pacientes-card">
+        <padding>
+            <Insets top="14" right="18" bottom="14" left="18" />
+        </padding>
+
+        <HBox spacing="16">
+            <VBox spacing="6" styleClass="campo" HBox.hgrow="ALWAYS">
+                <Label text="Código de Seguridad Social / DPI" styleClass="etiqueta-campo" />
+                <TextField fx:id="txtFieldDpi" promptText="Ej. 1234567890101" />
+            </VBox>
+            <VBox spacing="6" styleClass="campo" HBox.hgrow="ALWAYS">
+                <Label text="Fecha de nacimiento" styleClass="etiqueta-campo" />
+                <DatePicker fx:id="dateFechaNacimiento" maxWidth="Infinity" promptText="dd/mm/aaaa" />
+            </VBox>
+        </HBox>
+
+        <HBox spacing="16">
+            <VBox spacing="6" styleClass="campo" HBox.hgrow="ALWAYS">
+                <Label text="Nombres" styleClass="etiqueta-campo" />
+                <TextField fx:id="txtFieldNombres" promptText="Ej. María José" />
+            </VBox>
+            <VBox spacing="6" styleClass="campo" HBox.hgrow="ALWAYS">
+                <Label text="Apellidos" styleClass="etiqueta-campo" />
+                <TextField fx:id="txtFieldApellidos" promptText="Ej. Gómez López" />
+            </VBox>
+        </HBox>
+
+        <HBox spacing="16">
+            <VBox spacing="6" styleClass="campo" HBox.hgrow="ALWAYS">
+                <Label text="Género" styleClass="etiqueta-campo" />
+                <ComboBox fx:id="comboGenero" maxWidth="Infinity" promptText="Selecciona el género" />
+            </VBox>
+            <VBox spacing="6" styleClass="campo" HBox.hgrow="ALWAYS">
+                <Label text="Tipo de sangre" styleClass="etiqueta-campo" />
+                <ComboBox fx:id="comboTipoSangre" maxWidth="Infinity" promptText="Selecciona el tipo de sangre" />
+            </VBox>
+        </HBox>
+
+        <Label fx:id="lblMensaje" styleClass="pacientes-mensaje" wrapText="true" />
+        <Label fx:id="lblAvisoRol" styleClass="pacientes-aviso-rol" wrapText="true" visible="false" managed="false" />
+
+        <HBox spacing="12" alignment="CENTER_RIGHT">
+            <Button text="Limpiar / Nuevo" onAction="#handleLimpiar" styleClass="boton-secundario-clinico" />
+            <Button text="Eliminar" onAction="#handleEliminar" styleClass="boton-peligro-clinico" />
+            <Button text="Actualizar" onAction="#handleActualizar" styleClass="boton-secundario-clinico" />
+            <Button fx:id="btnGuardar" text="Guardar" onAction="#handleGuardar" styleClass="boton-primario-clinico" />
+        </HBox>
+    </VBox>
+
+    <Label text="Pacientes registrados" styleClass="pacientes-subtitulo-tabla" />
+
+    <TableView fx:id="tablaPacientes" styleClass="tabla-pacientes" minHeight="260" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colDpi" text="DPI" prefWidth="140" />
+            <TableColumn fx:id="colNombres" text="Nombres" prefWidth="170" />
+            <TableColumn fx:id="colApellidos" text="Apellidos" prefWidth="170" />
+            <TableColumn fx:id="colFechaNacimiento" text="Fecha de nacimiento" prefWidth="160" />
+            <TableColumn fx:id="colGenero" text="Género" prefWidth="120" />
+            <TableColumn fx:id="colTipoSangre" text="Tipo de sangre" prefWidth="130" />
+        </columns>
+    </TableView>
+</VBox>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="main.java.com.ingsoft.vitaligold.controller.MainMenuController"
+            styleClass="root-background"
+            stylesheets="@/main/resources/css/main-menu-view.css">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="12" styleClass="encabezado">
+            <padding>
+                <Insets top="14" right="24" bottom="14" left="24" />
+            </padding>
+            <Label text="VG" styleClass="logo-badge" />
+            <Label text="VitaliGold Centro de Salud" styleClass="marca" />
+            <HBox HBox.hgrow="ALWAYS" />
+            <Label fx:id="lblUsuarioActivo" styleClass="usuario-activo" />
+        </HBox>
+    </top>
+
+    <left>
+        <VBox spacing="8" styleClass="menu-lateral" prefWidth="220">
+            <padding>
+                <Insets top="24" right="12" bottom="24" left="12" />
+            </padding>
+            <Button fx:id="btnInicio" text="Inicio" onAction="#handleInicio" styleClass="boton-menu, boton-menu-activo" maxWidth="Infinity" />
+            <Button fx:id="btnGestionPacientes" text="Gestión de Pacientes" onAction="#handleGestionPacientes" styleClass="boton-menu" maxWidth="Infinity" />
+            <VBox VBox.vgrow="ALWAYS" />
+            <Button text="Cerrar Sesión" onAction="#handleCerrarSesion" styleClass="boton-menu, boton-cerrar-sesion" maxWidth="Infinity" />
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="16" styleClass="contenido-principal">
+            <padding>
+                <Insets top="24" right="24" bottom="24" left="24" />
+            </padding>
+            <Label fx:id="lblTituloSeccion" styleClass="titulo-seccion" />
+            <StackPane fx:id="paneContenido" styleClass="area-contenido" VBox.vgrow="ALWAYS" />
+        </VBox>
+    </center>
+</BorderPane>
